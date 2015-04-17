@@ -1,0 +1,1266 @@
+GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i586-pc-mingw32
+find_and_set_shell setting default_shell = cmd
+Reading makefiles...
+Reading makefile `d:\ndk\build/core/build-local.mk'...
+Reading makefile `d:/ndk/build/core/init.mk' (search path) (no ~ expansion)...
+Creating temporary batch file C:\Users\Jason\AppData\Local\Temp\make7872-1.bat
+CreateProcess(C:\Users\Jason\AppData\Local\Temp\make7872-1.bat,C:\Users\Jason\AppData\Local\Temp\make7872-1.bat,...)
+Main thread handle = 000000000000005C
+Cleaning up temporary batch file C:\Users\Jason\AppData\Local\Temp\make7872-1.bat
+CreateProcess(d:\ndk\prebuilt\windows-x86_64\bin\awk.exe,d:/ndk/prebuilt/windows-x86_64/bin/awk.exe -f d:/ndk/build/awk/check-awk.awk,...)
+Reading makefile `d:/ndk/build/core/definitions.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/gmsl/gmsl' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/gmsl/__gmsl' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/definitions-tests.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/definitions-utils.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/definitions-host.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/definitions-graph.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-platform.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/aarch64-linux-android-4.9/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/aarch64-linux-android-clang3.4/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/aarch64-linux-android-clang3.5/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/arm-linux-androideabi-4.6/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/arm-linux-androideabi-4.8/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/arm-linux-androideabi-4.9/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/arm-linux-androideabi-clang3.4/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/llvm-3.4/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/llvm-3.5/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/mips64el-linux-android-4.9/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/mips64el-linux-android-clang3.4/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/mips64el-linux-android-clang3.5/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/mipsel-linux-android-4.6/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/mipsel-linux-android-4.8/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/mipsel-linux-android-4.9/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/mipsel-linux-android-clang3.4/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/mipsel-linux-android-clang3.5/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/x86-4.6/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/x86-4.8/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/x86-4.9/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/x86-clang3.4/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/x86-clang3.5/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/x86_64-4.9/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/x86_64-clang3.4/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/x86_64-clang3.5/config.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/add-application.mk' (search path) (no ~ expansion)...
+Reading makefile `D:/FinalProject/Dual_Players/app/src/main/jni/Application.mk' (search path) (no ~ expansion)...
+CreateProcess(d:\ndk\prebuilt\windows-x86_64\bin\awk.exe,d:/ndk/prebuilt/windows-x86_64/bin/awk.exe -f d:/ndk/build/awk/extract-minsdkversion.awk D:/FinalProject/Dual_Players/app/src/main/AndroidManifest.xml,...)
+CreateProcess(d:\ndk\prebuilt\windows-x86_64\bin\awk.exe,d:/ndk/prebuilt/windows-x86_64/bin/awk.exe -f d:/ndk/build/awk/extract-debuggable.awk D:/FinalProject/Dual_Players/app/src/main/AndroidManifest.xml,...)
+Reading makefile `d:/ndk/build/core/setup-imports.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-all.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/setup-app.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/setup-abi.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/setup-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/default-build-commands.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/aarch64-linux-android-clang3.5/setup.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/sources/cxx-stl/system/Android.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/clear-vars.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-static-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-module.mk' (search path) (no ~ expansion)...
+Reading makefile `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/clear-vars.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/prebuilt-static-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/prebuilt-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-module.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/clear-vars.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-shared-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-module.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-binary.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/import-locals.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-binary.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/import-locals.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-binary.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/import-locals.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/setup-abi.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/setup-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/default-build-commands.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/setup.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/sources/cxx-stl/system/Android.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/clear-vars.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-static-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-module.mk' (search path) (no ~ expansion)...
+Reading makefile `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/clear-vars.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/prebuilt-static-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/prebuilt-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-module.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/clear-vars.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-shared-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-module.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-binary.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/import-locals.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-binary.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/import-locals.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-binary.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/import-locals.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/setup-abi.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/setup-toolchain.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/default-build-commands.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/toolchains/x86-clang3.5/setup.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/sources/cxx-stl/system/Android.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/clear-vars.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-static-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-module.mk' (search path) (no ~ expansion)...
+Reading makefile `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/clear-vars.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/prebuilt-static-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/prebuilt-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-module.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/clear-vars.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-shared-library.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-module.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-binary.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/import-locals.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-binary.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/import-locals.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/build-binary.mk' (search path) (no ~ expansion)...
+Reading makefile `d:/ndk/build/core/import-locals.mk' (search path) (no ~ expansion)...
+Reading makefile `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o.d' (search path) (don't care) (no ~ expansion)...
+Reading makefile `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o.d' (search path) (don't care) (no ~ expansion)...
+Updating makefiles....
+ Considering target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o.d'.
+  Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o.d'.
+  No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o.d'.
+  Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o.d'.
+ No need to remake target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o.d'.
+ Considering target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o.d'.
+  Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o.d'.
+  No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o.d'.
+  Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o.d'.
+ No need to remake target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o.d'.
+ Considering target file `d:/ndk/build/core/import-locals.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/import-locals.mk'.
+  No implicit rule found for `d:/ndk/build/core/import-locals.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/import-locals.mk'.
+ No need to remake target `d:/ndk/build/core/import-locals.mk'.
+ Considering target file `d:/ndk/build/core/build-binary.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/build-binary.mk'.
+  No implicit rule found for `d:/ndk/build/core/build-binary.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/build-binary.mk'.
+ No need to remake target `d:/ndk/build/core/build-binary.mk'.
+ Pruning file `d:/ndk/build/core/import-locals.mk'.
+ Pruning file `d:/ndk/build/core/build-binary.mk'.
+ Pruning file `d:/ndk/build/core/import-locals.mk'.
+ Pruning file `d:/ndk/build/core/build-binary.mk'.
+ Considering target file `d:/ndk/build/core/build-module.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/build-module.mk'.
+  No implicit rule found for `d:/ndk/build/core/build-module.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/build-module.mk'.
+ No need to remake target `d:/ndk/build/core/build-module.mk'.
+ Considering target file `d:/ndk/build/core/build-shared-library.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/build-shared-library.mk'.
+  No implicit rule found for `d:/ndk/build/core/build-shared-library.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/build-shared-library.mk'.
+ No need to remake target `d:/ndk/build/core/build-shared-library.mk'.
+ Considering target file `d:/ndk/build/core/clear-vars.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/clear-vars.mk'.
+  No implicit rule found for `d:/ndk/build/core/clear-vars.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/clear-vars.mk'.
+ No need to remake target `d:/ndk/build/core/clear-vars.mk'.
+ Pruning file `d:/ndk/build/core/build-module.mk'.
+ Considering target file `d:/ndk/build/core/prebuilt-library.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/prebuilt-library.mk'.
+  No implicit rule found for `d:/ndk/build/core/prebuilt-library.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/prebuilt-library.mk'.
+ No need to remake target `d:/ndk/build/core/prebuilt-library.mk'.
+ Considering target file `d:/ndk/build/core/prebuilt-static-library.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/prebuilt-static-library.mk'.
+  No implicit rule found for `d:/ndk/build/core/prebuilt-static-library.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/prebuilt-static-library.mk'.
+ No need to remake target `d:/ndk/build/core/prebuilt-static-library.mk'.
+ Pruning file `d:/ndk/build/core/clear-vars.mk'.
+ Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk'.
+  Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk'.
+  No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk'.
+  Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk'.
+ No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk'.
+ Pruning file `d:/ndk/build/core/build-module.mk'.
+ Considering target file `d:/ndk/build/core/build-static-library.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/build-static-library.mk'.
+  No implicit rule found for `d:/ndk/build/core/build-static-library.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/build-static-library.mk'.
+ No need to remake target `d:/ndk/build/core/build-static-library.mk'.
+ Pruning file `d:/ndk/build/core/clear-vars.mk'.
+ Considering target file `d:/ndk/sources/cxx-stl/system/Android.mk'.
+  Looking for an implicit rule for `d:/ndk/sources/cxx-stl/system/Android.mk'.
+  No implicit rule found for `d:/ndk/sources/cxx-stl/system/Android.mk'.
+  Finished prerequisites of target file `d:/ndk/sources/cxx-stl/system/Android.mk'.
+ No need to remake target `d:/ndk/sources/cxx-stl/system/Android.mk'.
+ Considering target file `d:/ndk/toolchains/x86-clang3.5/setup.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/x86-clang3.5/setup.mk'.
+  No implicit rule found for `d:/ndk/toolchains/x86-clang3.5/setup.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/x86-clang3.5/setup.mk'.
+ No need to remake target `d:/ndk/toolchains/x86-clang3.5/setup.mk'.
+ Considering target file `d:/ndk/build/core/default-build-commands.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/default-build-commands.mk'.
+  No implicit rule found for `d:/ndk/build/core/default-build-commands.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/default-build-commands.mk'.
+ No need to remake target `d:/ndk/build/core/default-build-commands.mk'.
+ Considering target file `d:/ndk/build/core/setup-toolchain.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/setup-toolchain.mk'.
+  No implicit rule found for `d:/ndk/build/core/setup-toolchain.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/setup-toolchain.mk'.
+ No need to remake target `d:/ndk/build/core/setup-toolchain.mk'.
+ Considering target file `d:/ndk/build/core/setup-abi.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/setup-abi.mk'.
+  No implicit rule found for `d:/ndk/build/core/setup-abi.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/setup-abi.mk'.
+ No need to remake target `d:/ndk/build/core/setup-abi.mk'.
+ Pruning file `d:/ndk/build/core/import-locals.mk'.
+ Pruning file `d:/ndk/build/core/build-binary.mk'.
+ Pruning file `d:/ndk/build/core/import-locals.mk'.
+ Pruning file `d:/ndk/build/core/build-binary.mk'.
+ Pruning file `d:/ndk/build/core/import-locals.mk'.
+ Pruning file `d:/ndk/build/core/build-binary.mk'.
+ Pruning file `d:/ndk/build/core/build-module.mk'.
+ Pruning file `d:/ndk/build/core/build-shared-library.mk'.
+ Pruning file `d:/ndk/build/core/clear-vars.mk'.
+ Pruning file `d:/ndk/build/core/build-module.mk'.
+ Pruning file `d:/ndk/build/core/prebuilt-library.mk'.
+ Pruning file `d:/ndk/build/core/prebuilt-static-library.mk'.
+ Pruning file `d:/ndk/build/core/clear-vars.mk'.
+ Pruning file `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk'.
+ Pruning file `d:/ndk/build/core/build-module.mk'.
+ Pruning file `d:/ndk/build/core/build-static-library.mk'.
+ Pruning file `d:/ndk/build/core/clear-vars.mk'.
+ Pruning file `d:/ndk/sources/cxx-stl/system/Android.mk'.
+ Considering target file `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/setup.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/setup.mk'.
+  No implicit rule found for `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/setup.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/setup.mk'.
+ No need to remake target `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/setup.mk'.
+ Pruning file `d:/ndk/build/core/default-build-commands.mk'.
+ Pruning file `d:/ndk/build/core/setup-toolchain.mk'.
+ Pruning file `d:/ndk/build/core/setup-abi.mk'.
+ Pruning file `d:/ndk/build/core/import-locals.mk'.
+ Pruning file `d:/ndk/build/core/build-binary.mk'.
+ Pruning file `d:/ndk/build/core/import-locals.mk'.
+ Pruning file `d:/ndk/build/core/build-binary.mk'.
+ Pruning file `d:/ndk/build/core/import-locals.mk'.
+ Pruning file `d:/ndk/build/core/build-binary.mk'.
+ Pruning file `d:/ndk/build/core/build-module.mk'.
+ Pruning file `d:/ndk/build/core/build-shared-library.mk'.
+ Pruning file `d:/ndk/build/core/clear-vars.mk'.
+ Pruning file `d:/ndk/build/core/build-module.mk'.
+ Pruning file `d:/ndk/build/core/prebuilt-library.mk'.
+ Pruning file `d:/ndk/build/core/prebuilt-static-library.mk'.
+ Pruning file `d:/ndk/build/core/clear-vars.mk'.
+ Pruning file `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk'.
+ Pruning file `d:/ndk/build/core/build-module.mk'.
+ Pruning file `d:/ndk/build/core/build-static-library.mk'.
+ Pruning file `d:/ndk/build/core/clear-vars.mk'.
+ Pruning file `d:/ndk/sources/cxx-stl/system/Android.mk'.
+ Considering target file `d:/ndk/toolchains/aarch64-linux-android-clang3.5/setup.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/aarch64-linux-android-clang3.5/setup.mk'.
+  No implicit rule found for `d:/ndk/toolchains/aarch64-linux-android-clang3.5/setup.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/aarch64-linux-android-clang3.5/setup.mk'.
+ No need to remake target `d:/ndk/toolchains/aarch64-linux-android-clang3.5/setup.mk'.
+ Pruning file `d:/ndk/build/core/default-build-commands.mk'.
+ Pruning file `d:/ndk/build/core/setup-toolchain.mk'.
+ Pruning file `d:/ndk/build/core/setup-abi.mk'.
+ Considering target file `d:/ndk/build/core/setup-app.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/setup-app.mk'.
+  No implicit rule found for `d:/ndk/build/core/setup-app.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/setup-app.mk'.
+ No need to remake target `d:/ndk/build/core/setup-app.mk'.
+ Considering target file `d:/ndk/build/core/build-all.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/build-all.mk'.
+  No implicit rule found for `d:/ndk/build/core/build-all.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/build-all.mk'.
+ No need to remake target `d:/ndk/build/core/build-all.mk'.
+ Considering target file `d:/ndk/build/core/setup-imports.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/setup-imports.mk'.
+  No implicit rule found for `d:/ndk/build/core/setup-imports.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/setup-imports.mk'.
+ No need to remake target `d:/ndk/build/core/setup-imports.mk'.
+ Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/Application.mk'.
+  Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/Application.mk'.
+  No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/Application.mk'.
+  Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/Application.mk'.
+ No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/Application.mk'.
+ Considering target file `d:/ndk/build/core/add-application.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/add-application.mk'.
+  No implicit rule found for `d:/ndk/build/core/add-application.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/add-application.mk'.
+ No need to remake target `d:/ndk/build/core/add-application.mk'.
+ Considering target file `d:/ndk/toolchains/x86_64-clang3.5/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/x86_64-clang3.5/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/x86_64-clang3.5/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/x86_64-clang3.5/config.mk'.
+ No need to remake target `d:/ndk/toolchains/x86_64-clang3.5/config.mk'.
+ Considering target file `d:/ndk/build/core/add-toolchain.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/add-toolchain.mk'.
+  No implicit rule found for `d:/ndk/build/core/add-toolchain.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/add-toolchain.mk'.
+ No need to remake target `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/x86_64-clang3.4/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/x86_64-clang3.4/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/x86_64-clang3.4/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/x86_64-clang3.4/config.mk'.
+ No need to remake target `d:/ndk/toolchains/x86_64-clang3.4/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/x86_64-4.9/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/x86_64-4.9/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/x86_64-4.9/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/x86_64-4.9/config.mk'.
+ No need to remake target `d:/ndk/toolchains/x86_64-4.9/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/x86-clang3.5/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/x86-clang3.5/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/x86-clang3.5/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/x86-clang3.5/config.mk'.
+ No need to remake target `d:/ndk/toolchains/x86-clang3.5/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/x86-clang3.4/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/x86-clang3.4/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/x86-clang3.4/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/x86-clang3.4/config.mk'.
+ No need to remake target `d:/ndk/toolchains/x86-clang3.4/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/x86-4.9/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/x86-4.9/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/x86-4.9/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/x86-4.9/config.mk'.
+ No need to remake target `d:/ndk/toolchains/x86-4.9/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/x86-4.8/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/x86-4.8/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/x86-4.8/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/x86-4.8/config.mk'.
+ No need to remake target `d:/ndk/toolchains/x86-4.8/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/x86-4.6/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/x86-4.6/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/x86-4.6/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/x86-4.6/config.mk'.
+ No need to remake target `d:/ndk/toolchains/x86-4.6/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/mipsel-linux-android-clang3.5/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/mipsel-linux-android-clang3.5/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/mipsel-linux-android-clang3.5/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/mipsel-linux-android-clang3.5/config.mk'.
+ No need to remake target `d:/ndk/toolchains/mipsel-linux-android-clang3.5/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/mipsel-linux-android-clang3.4/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/mipsel-linux-android-clang3.4/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/mipsel-linux-android-clang3.4/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/mipsel-linux-android-clang3.4/config.mk'.
+ No need to remake target `d:/ndk/toolchains/mipsel-linux-android-clang3.4/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/mipsel-linux-android-4.9/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/mipsel-linux-android-4.9/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/mipsel-linux-android-4.9/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/mipsel-linux-android-4.9/config.mk'.
+ No need to remake target `d:/ndk/toolchains/mipsel-linux-android-4.9/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/mipsel-linux-android-4.8/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/mipsel-linux-android-4.8/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/mipsel-linux-android-4.8/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/mipsel-linux-android-4.8/config.mk'.
+ No need to remake target `d:/ndk/toolchains/mipsel-linux-android-4.8/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/mipsel-linux-android-4.6/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/mipsel-linux-android-4.6/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/mipsel-linux-android-4.6/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/mipsel-linux-android-4.6/config.mk'.
+ No need to remake target `d:/ndk/toolchains/mipsel-linux-android-4.6/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/mips64el-linux-android-clang3.5/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/mips64el-linux-android-clang3.5/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/mips64el-linux-android-clang3.5/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/mips64el-linux-android-clang3.5/config.mk'.
+ No need to remake target `d:/ndk/toolchains/mips64el-linux-android-clang3.5/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/mips64el-linux-android-clang3.4/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/mips64el-linux-android-clang3.4/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/mips64el-linux-android-clang3.4/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/mips64el-linux-android-clang3.4/config.mk'.
+ No need to remake target `d:/ndk/toolchains/mips64el-linux-android-clang3.4/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/mips64el-linux-android-4.9/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/mips64el-linux-android-4.9/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/mips64el-linux-android-4.9/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/mips64el-linux-android-4.9/config.mk'.
+ No need to remake target `d:/ndk/toolchains/mips64el-linux-android-4.9/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/llvm-3.5/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/llvm-3.5/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/llvm-3.5/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/llvm-3.5/config.mk'.
+ No need to remake target `d:/ndk/toolchains/llvm-3.5/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/llvm-3.4/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/llvm-3.4/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/llvm-3.4/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/llvm-3.4/config.mk'.
+ No need to remake target `d:/ndk/toolchains/llvm-3.4/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/config.mk'.
+ No need to remake target `d:/ndk/toolchains/arm-linux-androideabi-clang3.5/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/arm-linux-androideabi-clang3.4/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/arm-linux-androideabi-clang3.4/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/arm-linux-androideabi-clang3.4/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/arm-linux-androideabi-clang3.4/config.mk'.
+ No need to remake target `d:/ndk/toolchains/arm-linux-androideabi-clang3.4/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/arm-linux-androideabi-4.9/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/arm-linux-androideabi-4.9/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/arm-linux-androideabi-4.9/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/arm-linux-androideabi-4.9/config.mk'.
+ No need to remake target `d:/ndk/toolchains/arm-linux-androideabi-4.9/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/arm-linux-androideabi-4.8/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/arm-linux-androideabi-4.8/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/arm-linux-androideabi-4.8/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/arm-linux-androideabi-4.8/config.mk'.
+ No need to remake target `d:/ndk/toolchains/arm-linux-androideabi-4.8/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/arm-linux-androideabi-4.6/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/arm-linux-androideabi-4.6/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/arm-linux-androideabi-4.6/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/arm-linux-androideabi-4.6/config.mk'.
+ No need to remake target `d:/ndk/toolchains/arm-linux-androideabi-4.6/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/aarch64-linux-android-clang3.5/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/aarch64-linux-android-clang3.5/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/aarch64-linux-android-clang3.5/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/aarch64-linux-android-clang3.5/config.mk'.
+ No need to remake target `d:/ndk/toolchains/aarch64-linux-android-clang3.5/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/aarch64-linux-android-clang3.4/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/aarch64-linux-android-clang3.4/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/aarch64-linux-android-clang3.4/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/aarch64-linux-android-clang3.4/config.mk'.
+ No need to remake target `d:/ndk/toolchains/aarch64-linux-android-clang3.4/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/toolchains/aarch64-linux-android-4.9/config.mk'.
+  Looking for an implicit rule for `d:/ndk/toolchains/aarch64-linux-android-4.9/config.mk'.
+  No implicit rule found for `d:/ndk/toolchains/aarch64-linux-android-4.9/config.mk'.
+  Finished prerequisites of target file `d:/ndk/toolchains/aarch64-linux-android-4.9/config.mk'.
+ No need to remake target `d:/ndk/toolchains/aarch64-linux-android-4.9/config.mk'.
+ Pruning file `d:/ndk/build/core/add-toolchain.mk'.
+ Considering target file `d:/ndk/build/core/add-platform.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/add-platform.mk'.
+  No implicit rule found for `d:/ndk/build/core/add-platform.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/add-platform.mk'.
+ No need to remake target `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Pruning file `d:/ndk/build/core/add-platform.mk'.
+ Considering target file `d:/ndk/build/core/definitions-graph.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/definitions-graph.mk'.
+  No implicit rule found for `d:/ndk/build/core/definitions-graph.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/definitions-graph.mk'.
+ No need to remake target `d:/ndk/build/core/definitions-graph.mk'.
+ Considering target file `d:/ndk/build/core/definitions-host.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/definitions-host.mk'.
+  No implicit rule found for `d:/ndk/build/core/definitions-host.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/definitions-host.mk'.
+ No need to remake target `d:/ndk/build/core/definitions-host.mk'.
+ Considering target file `d:/ndk/build/core/definitions-utils.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/definitions-utils.mk'.
+  No implicit rule found for `d:/ndk/build/core/definitions-utils.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/definitions-utils.mk'.
+ No need to remake target `d:/ndk/build/core/definitions-utils.mk'.
+ Considering target file `d:/ndk/build/core/definitions-tests.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/definitions-tests.mk'.
+  No implicit rule found for `d:/ndk/build/core/definitions-tests.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/definitions-tests.mk'.
+ No need to remake target `d:/ndk/build/core/definitions-tests.mk'.
+ Considering target file `d:/ndk/build/gmsl/__gmsl'.
+  Looking for an implicit rule for `d:/ndk/build/gmsl/__gmsl'.
+  No implicit rule found for `d:/ndk/build/gmsl/__gmsl'.
+  Finished prerequisites of target file `d:/ndk/build/gmsl/__gmsl'.
+ No need to remake target `d:/ndk/build/gmsl/__gmsl'.
+ Considering target file `d:/ndk/build/gmsl/gmsl'.
+  Looking for an implicit rule for `d:/ndk/build/gmsl/gmsl'.
+  No implicit rule found for `d:/ndk/build/gmsl/gmsl'.
+  Finished prerequisites of target file `d:/ndk/build/gmsl/gmsl'.
+ No need to remake target `d:/ndk/build/gmsl/gmsl'.
+ Considering target file `d:/ndk/build/core/definitions.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/definitions.mk'.
+  No implicit rule found for `d:/ndk/build/core/definitions.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/definitions.mk'.
+ No need to remake target `d:/ndk/build/core/definitions.mk'.
+ Considering target file `d:/ndk/build/core/init.mk'.
+  Looking for an implicit rule for `d:/ndk/build/core/init.mk'.
+  No implicit rule found for `d:/ndk/build/core/init.mk'.
+  Finished prerequisites of target file `d:/ndk/build/core/init.mk'.
+ No need to remake target `d:/ndk/build/core/init.mk'.
+ Considering target file `d:\ndk\build/core/build-local.mk'.
+  Looking for an implicit rule for `d:\ndk\build/core/build-local.mk'.
+  No implicit rule found for `d:\ndk\build/core/build-local.mk'.
+  Finished prerequisites of target file `d:\ndk\build/core/build-local.mk'.
+ No need to remake target `d:\ndk\build/core/build-local.mk'.
+Updating goal targets....
+Considering target file `all'.
+ File `all' does not exist.
+  Considering target file `installed_modules'.
+   File `installed_modules' does not exist.
+    Considering target file `clean-installed-binaries'.
+     File `clean-installed-binaries' does not exist.
+     Finished prerequisites of target file `clean-installed-binaries'.
+    Target `clean-installed-binaries' is double-colon and has no prerequisites.
+    Must remake target `clean-installed-binaries'.
+    Successfully remade target file `clean-installed-binaries'.
+    Considering target file `clean-installed-binaries'.
+     File `clean-installed-binaries' does not exist.
+     Finished prerequisites of target file `clean-installed-binaries'.
+    Target `clean-installed-binaries' is double-colon and has no prerequisites.
+    Must remake target `clean-installed-binaries'.
+    Successfully remade target file `clean-installed-binaries'.
+    Considering target file `clean-installed-binaries'.
+     File `clean-installed-binaries' does not exist.
+     Finished prerequisites of target file `clean-installed-binaries'.
+    Target `clean-installed-binaries' is double-colon and has no prerequisites.
+    Must remake target `clean-installed-binaries'.
+    Successfully remade target file `clean-installed-binaries'.
+    Considering target file `clean-installed-binaries'.
+     File `clean-installed-binaries' does not exist.
+     Finished prerequisites of target file `clean-installed-binaries'.
+    Target `clean-installed-binaries' is double-colon and has no prerequisites.
+    Must remake target `clean-installed-binaries'.
+    Successfully remade target file `clean-installed-binaries'.
+    Considering target file `libraries'.
+     File `libraries' does not exist.
+      Considering target file `static_libraries'.
+       File `static_libraries' does not exist.
+       Finished prerequisites of target file `static_libraries'.
+      Must remake target `static_libraries'.
+      Successfully remade target file `static_libraries'.
+      Considering target file `shared_libraries'.
+       File `shared_libraries' does not exist.
+       Finished prerequisites of target file `shared_libraries'.
+      Must remake target `shared_libraries'.
+      Successfully remade target file `shared_libraries'.
+     Finished prerequisites of target file `libraries'.
+    Must remake target `libraries'.
+    Successfully remade target file `libraries'.
+    Considering target file `D:/FinalProject/Dual_Players/app/src/main/libs/arm64-v8a/libDual_Players.so'.
+     File `D:/FinalProject/Dual_Players/app/src/main/libs/arm64-v8a/libDual_Players.so' does not exist.
+      Considering target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libDual_Players.so'.
+       File `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libDual_Players.so' does not exist.
+        Considering target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.cpp'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.cpp'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.cpp'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.cpp'.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.cpp'.
+          Pruning file `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk'.
+          Pruning file `D:/FinalProject/Dual_Players/app/src/main/jni/Application.mk'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players'.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players'.
+          Pruning file `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.cpp'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Platform.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Platform.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Platform.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Platform.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Platform.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Platform.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Android.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Android.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Android.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Android.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Android.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Android.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidConfiguration.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidConfiguration.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidConfiguration.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidConfiguration.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidConfiguration.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidConfiguration.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidMetadata.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidMetadata.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidMetadata.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidMetadata.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidMetadata.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidMetadata.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\math.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\math.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\math.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\math.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\math.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\math.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs_elf.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs_elf.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs_elf.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs_elf.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs_elf.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs_elf.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/api-level.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/api-level.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/api-level.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/api-level.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/api-level.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/api-level.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\limits.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\limits.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\limits.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\limits.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\limits.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\limits.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/limits.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/limits.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/limits.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/limits.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/limits.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/limits.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/limits.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/limits.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/limits.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/limits.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/limits.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/limits.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/syslimits.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/syslimits.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/syslimits.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/syslimits.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/syslimits.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/syslimits.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\pthread.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\pthread.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\pthread.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\pthread.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\pthread.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\pthread.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\time.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\time.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\time.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\time.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\time.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\time.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/time.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/time.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/time.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/time.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/time.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/time.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/types.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/types.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/types.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/types.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/types.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/types.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdint.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdint.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdint.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdint.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdint.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdint.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\machine/wchar_limits.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\machine/wchar_limits.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\machine/wchar_limits.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\machine/wchar_limits.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\machine/wchar_limits.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\machine/wchar_limits.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/types.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/types.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/types.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/types.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/types.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/types.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/types.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/types.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/types.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/types.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/types.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/types.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/types.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/types.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/types.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/types.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/types.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/types.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/int-ll64.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/int-ll64.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/int-ll64.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/int-ll64.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/int-ll64.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/int-ll64.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/bitsperlong.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/bitsperlong.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/bitsperlong.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/bitsperlong.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/bitsperlong.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/bitsperlong.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/bitsperlong.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/bitsperlong.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/bitsperlong.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/bitsperlong.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/bitsperlong.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/bitsperlong.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/posix_types.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/posix_types.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/posix_types.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/posix_types.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/posix_types.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/posix_types.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/stddef.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/stddef.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/stddef.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/stddef.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/stddef.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/stddef.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/compiler.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/compiler.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/compiler.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/compiler.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/compiler.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/compiler.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/posix_types.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/posix_types.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/posix_types.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/posix_types.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/posix_types.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/posix_types.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/posix_types.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/posix_types.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/posix_types.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/posix_types.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/posix_types.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/posix_types.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/sysmacros.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/sysmacros.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/sysmacros.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/sysmacros.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/sysmacros.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/sysmacros.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/time.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/time.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/time.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/time.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/time.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/time.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\xlocale.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\xlocale.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\xlocale.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\xlocale.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\xlocale.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\xlocale.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\signal.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\signal.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\signal.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\signal.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\signal.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\signal.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\errno.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\errno.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\errno.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\errno.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\errno.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\errno.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/errno.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/errno.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/errno.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/errno.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/errno.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/errno.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/errno.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/errno.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/errno.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/errno.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/errno.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/errno.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno-base.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno-base.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno-base.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno-base.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno-base.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno-base.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\string.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\string.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\string.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\string.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\string.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\string.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\malloc.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\malloc.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\malloc.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\malloc.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\malloc.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\malloc.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/sigcontext.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/sigcontext.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/sigcontext.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/sigcontext.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/sigcontext.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/sigcontext.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/signal.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/signal.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/signal.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/signal.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/signal.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/signal.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/signal.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/signal.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/signal.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/signal.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/signal.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/signal.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal-defs.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal-defs.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal-defs.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal-defs.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal-defs.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal-defs.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/siginfo.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/siginfo.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/siginfo.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/siginfo.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/siginfo.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/siginfo.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/siginfo.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/siginfo.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/siginfo.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/siginfo.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/siginfo.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/siginfo.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/ucontext.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/ucontext.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/ucontext.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/ucontext.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/ucontext.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/ucontext.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/user.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/user.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/user.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/user.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/user.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/user.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdlib.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdlib.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdlib.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdlib.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdlib.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdlib.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\alloca.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\alloca.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\alloca.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\alloca.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\alloca.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\alloca.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\strings.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\strings.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\strings.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\strings.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\strings.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\strings.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\memory.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\memory.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\memory.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\memory.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\memory.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\memory.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdio.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdio.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdio.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdio.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdio.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdio.h'.
+          Considering target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/log.h'.
+           Looking for an implicit rule for `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/log.h'.
+           No implicit rule found for `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/log.h'.
+           Finished prerequisites of target file `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/log.h'.
+          No commands for `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/log.h' and no prerequisites actually changed.
+          No need to remake target `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/log.h'.
+         Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.cpp' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/Application.mk' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players' is order-only for target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.cpp' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Platform.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Android.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidConfiguration.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidMetadata.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\math.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs_elf.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/api-level.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\limits.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/limits.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/limits.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/syslimits.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\pthread.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\time.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/time.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdint.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\machine/wchar_limits.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/int-ll64.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/bitsperlong.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/bitsperlong.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/posix_types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/stddef.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/compiler.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/posix_types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/posix_types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/sysmacros.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/time.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\xlocale.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\signal.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\errno.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/errno.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/errno.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno-base.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\string.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\malloc.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/sigcontext.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/signal.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/signal.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal-defs.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/siginfo.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/siginfo.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/ucontext.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/user.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdlib.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\alloca.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\strings.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\memory.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdio.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/log.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+        No need to remake target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o'.
+        Considering target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.cpp'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.cpp'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.cpp'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.cpp'.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.cpp'.
+          Pruning file `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk'.
+          Pruning file `D:/FinalProject/Dual_Players/app/src/main/jni/Application.mk'.
+          Pruning file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players'.
+          Pruning file `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.cpp'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs_elf.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/api-level.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdlib.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\string.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\malloc.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\xlocale.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\alloca.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\strings.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/types.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdint.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\machine/wchar_limits.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/types.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/types.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/types.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/int-ll64.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/bitsperlong.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/bitsperlong.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/posix_types.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/stddef.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/compiler.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/posix_types.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/posix_types.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/sysmacros.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\memory.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdio.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/log.h'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredAnalyzer.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredAnalyzer.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredAnalyzer.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredAnalyzer.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredAnalyzer.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredAnalyzer.h'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredDecoder.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredDecoder.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredDecoder.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredDecoder.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredDecoder.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredDecoder.h'.
+          Considering target file `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.h'.
+           Looking for an implicit rule for `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.h'.
+           No implicit rule found for `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.h'.
+           Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.h'.
+          No commands for `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.h' and no prerequisites actually changed.
+          No need to remake target `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Platform.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Android.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidConfiguration.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidMetadata.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\math.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\limits.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/limits.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/limits.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/syslimits.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\pthread.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\time.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/time.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/time.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\signal.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\errno.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/errno.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/errno.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno-base.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/sigcontext.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/signal.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/signal.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal-defs.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/siginfo.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/siginfo.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/ucontext.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/user.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h'.
+          Pruning file `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h'.
+         Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.cpp' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/Android.mk' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/Application.mk' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players' is order-only for target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.cpp' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/cdefs_elf.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/api-level.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdlib.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\string.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\malloc.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\xlocale.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\alloca.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\strings.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdint.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\machine/wchar_limits.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/int-ll64.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/bitsperlong.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/bitsperlong.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/posix_types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/stddef.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/compiler.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/posix_types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/posix_types.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/sysmacros.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\memory.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\stdio.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\android/log.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredAnalyzer.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredDecoder.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Platform.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Android.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidConfiguration.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_AndroidMetadata.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\math.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\limits.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/limits.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/limits.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/syslimits.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\pthread.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\time.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/time.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/time.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\signal.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\errno.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/errno.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/errno.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/errno-base.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/sigcontext.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/signal.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/signal.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/signal-defs.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm/siginfo.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\asm-generic/siginfo.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/ucontext.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sys/user.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+         Prerequisite `d:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h' is older than target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+        No need to remake target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o'.
+        Considering target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a'.
+         Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a'.
+        No need to remake target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a'.
+        Considering target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libstdc++.a'.
+          Pruning file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a'.
+         Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libstdc++.a'.
+         Prerequisite `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a' is order-only for target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libstdc++.a'.
+        No need to remake target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libstdc++.a'.
+       Finished prerequisites of target file `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libDual_Players.so'.
+      Must remake target `D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libDual_Players.so'.
+Creating temporary batch file C:\Users\Jason\AppData\Local\Temp\make7872-1.bat
+CreateProcess(C:\Users\Jason\AppData\Local\Temp\make7872-1.bat,C:\Users\Jason\AppData\Local\Temp\make7872-1.bat,...)
+Putting child 0000000001FB7630 (D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libDual_Players.so) PID 5359600 on the chain.
+Live child 0000000001FB7630 (D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libDual_Players.so) PID 5359600 
+[arm64-v8a] SharedLibrary  : libDual_Players.so
+Reaping winning child 0x01fb7630 PID 5359600 
+Cleaning up temp batch file C:\Users\Jason\AppData\Local\Temp\make7872-1.bat
+CreateProcess(d:\ndk\toolchains\llvm-3.5\prebuilt\windows-x86_64\bin\clang++.exe,d:/ndk/toolchains/llvm-3.5/prebuilt/windows-x86_64/bin/clang++.exe -Wl,-soname,libDual_Players.so -shared --sysroot=d:/ndk/platforms/android-21/arch-arm64 D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/DualPlayer.o D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/Dual_Players/Analyzer.o D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libstdc++.a -lgcc -gcc-toolchain d:/ndk/toolchains/aarch64-linux-android-4.9/prebuilt/windows-x86_64 -target aarch64-none-linux-android -no-canonical-prefixes -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Ld:/ndk/platforms/android-21/arch-arm64/usr/lib -llog -landroid -lOpenSLES -lstdc++ -lc -lm -o D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libDual_Players.so,...)
+Live child 0000000001FB7630 (D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/libDual_Players.so) PID 5359600 
+Reaping losing child 0000000001FB7630 PID 5359600 
+Removing child 0000000001FB7630 PID 5359600 from chain.
