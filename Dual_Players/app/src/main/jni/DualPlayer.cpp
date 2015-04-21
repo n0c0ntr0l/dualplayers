@@ -1,87 +1,91 @@
+
 #define LOG_TAG "DualPlayer"
+
+#include "DualPlayer.h"
 #include "SuperPoweredFilter.h"
 #include "SuperPoweredFlanger.h"
 #include "SuperPoweredFilter.h"
 #include "SuperPoweredFX.h"
 #include "SuperPoweredMixer.h"
 #include "SuperPoweredRoll.h"
-#include "DualPlayer.h"
 
-
-#include <SLES/OpenSLES.h>
-#include <SLES/OpenSLES_Android.h>
 #include <jni.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <android/log.h>
 
-
-
-static const SLboolean requireds[2] = { SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE };
-
-static DualPlayer *dualplayer = NULL;
-static unsigned int androidSampleRate;
-static unsigned int androidBufferSize;
-static bool stopOrStartA = false;
-static bool stopOrStartB = false;
-
+static unsigned int deckATrackSampleRate;
+static unsigned int deckBTrackSampleRate;
+static bool firstTime = true;
+static unsigned int initialSampleR;
 
 
 static void playerEventCallbackA(void *clientData, SuperpoweredAdvancedAudioPlayerEvent event, void *value) {
     if (event == SuperpoweredAdvancedAudioPlayerEvent_LoadSuccess) {
     	SuperpoweredAdvancedAudioPlayer *playerA = *((SuperpoweredAdvancedAudioPlayer **)clientData);
-
-		}
+    };
 }
-
-
 
 static void playerEventCallbackB(void *clientData, SuperpoweredAdvancedAudioPlayerEvent event, void *value) {
     if (event == SuperpoweredAdvancedAudioPlayerEvent_LoadSuccess) {
     	SuperpoweredAdvancedAudioPlayer *playerB = *((SuperpoweredAdvancedAudioPlayer **)clientData);
-    	
-		}
+    };
 }
 
 static void openSLESCallback(SLAndroidSimpleBufferQueueItf caller, void *pContext) {
-	//__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"before we start processing");
 	((DualPlayer *)pContext)->process(caller);
 }
 
-DualPlayer::DualPlayer(unsigned int theSampleRate, unsigned int theSizeOfTheBuffer){
-		isEngineInitialized = false;
-    // This will keep our player volumes and playback states in sync.
-		buffersize = theSizeOfTheBuffer;
-		currentBuffer=0;
-		crossValue =0.0f;
-		volB =0.0f; 
-		volA =(1.0f * headroom);
-		
-		pthread_mutex_init(&mutex, NULL); 
-		for (int n = 0; n < NUM_BUFFERS; n++) outputBuffer[n] = (float *)memalign(16, (buffersize + 16) * sizeof(float) * 2);
-		hasAbeenPlayedYet = false;
-		hasBbeenPlayedYet = false;
-		samplerate = theSampleRate;
-		
-		__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"THE SAMPLERATE INSIDE THE CLAS IS...%i",theSampleRate);
-		__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"THE BUFFERSIZE INSIDE THE CLASS...%i",theSizeOfTheBuffer);
-        playerA = new SuperpoweredAdvancedAudioPlayer(&playerA, playerEventCallbackA, theSampleRate, 0);
-        playerB = new SuperpoweredAdvancedAudioPlayer(&playerB, playerEventCallbackB, theSampleRate, 0);
-        
+static const SLboolean requireds[2] = { SL_BOOLEAN_TRUE, SL_BOOLEAN_TRUE };
 
-        threeBandEQ = new Superpowered3BandEQ(theSampleRate);
+DualPlayer::DualPlayer(unsigned int buffer, unsigned int sample){
+    pthread_mutex_init(&mutex, NULL); // This will keep our player volumes and playback states in sync.
+	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"before player");
+	currentBuffer = 0;
+	buffersize = buffer;
+	samplerate = sample;
+	deckAIsPlaying = false;
+	deckBIsPlaying = false;
+	firstPlay = true;
+	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"buffer is %i",buffersize);
+	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"samplerate is %i",samplerate);
+	crossValue = 0.50f;
+	volB = 1.0f * headroom;
+	volA = 1.0f * headroom;
+	
+	
 
-        mixer = new SuperpoweredStereoMixer();
+    for (int n = 0; n < NUM_BUFFERS; n++) outputBuffer[n] = (float *)memalign(16, (buffersize + 16) * sizeof(float) * 2);
 
+    
+	
+    playerA = new SuperpoweredAdvancedAudioPlayer(&playerA ,playerEventCallbackA, samplerate, 0);
+    __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, "player A made");
+	
+    playerB = new SuperpoweredAdvancedAudioPlayer(&playerB, playerEventCallbackB, samplerate, 0);
+     __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, "player B made");
+   
 
+    playerA->syncMode = playerB->syncMode = SuperpoweredAdvancedAudioPlayerSyncMode_TempoAndBeat;
+    __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, "sync enabled");
+
+    roll = new SuperpoweredRoll(samplerate);
+    filter = new SuperpoweredFilter(SuperpoweredFilter_Resonant_Lowpass, samplerate);
+    flanger = new SuperpoweredFlanger(samplerate);
+
+    mixer = new SuperpoweredStereoMixer();
+
+    
+	
 
 }
 
-void DualPlayer::initialiseAudioEngine(){
-     // Create the OpenSL ES engine.
+void DualPlayer::initializeAll(){
 
+	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"before sl engine is created");
 	slCreateEngine(&openSLEngine, 0, NULL, 0, NULL, NULL);
 	(*openSLEngine)->Realize(openSLEngine, SL_BOOLEAN_FALSE);
+	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"SL ENGINE created");
 	SLEngineItf openSLEngineInterface = NULL;
 	(*openSLEngine)->GetInterface(openSLEngine, SL_IID_ENGINE, &openSLEngineInterface);
 	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"SL ENGINE OPENED");
@@ -132,46 +136,75 @@ void DualPlayer::initialiseAudioEngine(){
 	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"n");
 }
 
-void DualPlayer::addNewTrackDeckA(const char *pathToFileA, double bpm, double startingBeatMs){
-	if(!isEngineInitialized){
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"the logic test");
-	this->initialiseAudioEngine();
-	
-	isEngineInitialized = true;
-	}
-    playerA->open(pathToFileA);
-
-
-    playerA->setFirstBeatMs(startingBeatMs);
-
-    playerA->setBpm(bpm);
-	playerA->setSamplerate(samplerate);
-	playerA->syncMode = playerB->syncMode = SuperpoweredAdvancedAudioPlayerSyncMode_TempoAndBeat;
-
-
+DualPlayer::~DualPlayer() {
+	for (int n = 0; n < NUM_BUFFERS; n++) free(outputBuffer[n]);
+    delete playerA;
+    delete playerB;
+    delete mixer;
+    pthread_mutex_destroy(&mutex);
 }
 
-void DualPlayer::addNewTrackDeckB(const char *pathToFileB, double bpm, double startingBeatMs){
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"the startingBeatMs %lf",startingBeatMs);
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"%s",pathToFileB);
-    __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"before A");
-	playerB->open(pathToFileB);
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"A");
-	
-    playerB->setFirstBeatMs(startingBeatMs);
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"B");
+void DualPlayer::onPlayPauseDeckA(bool play) {
+    //pthread_mutex_lock(&mutex);
+    if (!play) {
+				__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG," It got told to pause");
+        playerA->pause(); 
+    } else {
+		__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG," before hitting play on deck A");
+		if(firstPlay){
+			__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"Toggle Playback");
+			playerA->togglePlayback();
+			deckAIsPlaying = true;
+			firstPlay = false;
+		} else {
+			playerA->play(true);
+			deckAIsPlaying = true;
+			//playerB->play(true);
+			__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG," after hitting play on deck A");
+		}
+    }
+    //pthread_mutex_unlock(&mutex);
+}
+
+void DualPlayer::onPlayPauseDeckB(bool play) {
+	pthread_mutex_lock(&mutex);
+    if (!play) {
+        playerB->pause();
+		deckBIsPlaying = false;		
+    } else {
+	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG," play B c++");
+        playerB->togglePlayback();
+		deckBIsPlaying = true;
+		//playerA->play(true);
+    }
+	pthread_mutex_unlock(&mutex);
+}
+
+void DualPlayer::setPathForDeckA(const char* path, double bpm, double setPosition, unsigned int sampleRate){
+	playerA->open(path);
+	playerA->setBpm(bpm);
+	playerA->setFirstBeatMs(setPosition);
+	playerA->setPosition(playerA->firstBeatMs, false, true);
+}
+
+void DualPlayer::setPathForDeckB(const char* path, double bpm, double setPosition, unsigned int sampleRate){
+	playerB->open(path);
 	playerB->setBpm(bpm);
-		__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"we added a track to deck B");
-	playerB->setPosition(startingBeatMs,false,true);
-	
-
-	playerB->setSamplerate(samplerate);
-	
-	hasAbeenPlayedYet = true;
-
-
-
+	playerB->setFirstBeatMs(setPosition);
+	playerB->setPosition(playerB->firstBeatMs, false, true);
 }
+
+double DualPlayer::getPositionOfDeckAMs(){
+	double playerAPosition = playerA->positionMs;
+	return playerAPosition;
+}
+
+double DualPlayer::getPositionOfDeckBMs(){
+	double playerBPosition = playerB->positionMs;
+	return playerBPosition;
+}
+
+
 
 void DualPlayer::onCrossfader(int value) {
     pthread_mutex_lock(&mutex);
@@ -187,68 +220,21 @@ void DualPlayer::onCrossfader(int value) {
         volB = cosf(M_PI_2 * (1.0f - crossValue)) * headroom;
     };
     pthread_mutex_unlock(&mutex);
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"and not here");
 }
 
-
-
-void DualPlayer::pauseDeckA(){
-     playerA->togglePlayback();
+void DualPlayer::onFxSelect(int value) {
+	__android_log_print(ANDROID_LOG_VERBOSE, "SuperpoweredExample", "FXSEL %i", value);
+	activeFx = value;
 }
 
-void DualPlayer::pauseDeckB(){
-    playerB->togglePlayback();
+void DualPlayer::onFxOff() {
+    filter->enable(false);
+    roll->enable(false);
+    flanger->enable(false);
 }
 
-void DualPlayer::process(SLAndroidSimpleBufferQueueItf caller) {
-    pthread_mutex_lock(&mutex);
-	//__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"into process");
-	float *stereoBuffer = outputBuffer[currentBuffer];
-
-	bool masterIsA = (crossValue <= 0.5f);
-	float masterBpm = 125.0;
-	bpmMaster = 125;
-	double msElapsedSinceLastBeatA;
-	if(!hasAbeenPlayedYet){
-		masterBpm = playerA->currentBpm;
-		//__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG," A has not been played : %f",masterBpm);
-		//__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG," A has not been played bpmMaster: %d",bpmMaster);
-		
-	} else {
-		__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG," b has not been played: %f",masterBpm);
-		 masterBpm = masterIsA ? playerA->currentBpm : playerB->currentBpm;
-		 msElapsedSinceLastBeatA = playerA->msElapsedSinceLastBeat;
-	}
-	//__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"34");
-     // When playerB needs it, playerA has already stepped this value, so save it now.
-
-	
-	
-	
-	bool silence;
-	if(!hasAbeenPlayedYet){
-		 silence = !playerA->process(stereoBuffer, false, buffersize, volA,bpmMaster, -1.0);
-		
-	} else {
-	 silence = !playerA->process(stereoBuffer, false, buffersize, volA,bpmMaster, playerB->msElapsedSinceLastBeat);
-		
-	}
-	//__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"78");
-	if(hasAbeenPlayedYet){
-		if (playerB->process(stereoBuffer, !silence, buffersize, volB, bpmMaster, msElapsedSinceLastBeatA)) silence = false;
-	}
-	//__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"90");
-	pthread_mutex_unlock(&mutex);
-	//__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"before short to int");
-if (silence) memset(stereoBuffer, 0, buffersize * 4); else SuperpoweredStereoMixer::floatToShortInt(stereoBuffer, (short int *)stereoBuffer, buffersize);
-//__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"after short to int");
-	(*caller)->Enqueue(caller, stereoBuffer, buffersize * 4);
-	//__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"stereobuffe put into queue");
-	if (currentBuffer < NUM_BUFFERS - 1) currentBuffer++; else currentBuffer = 0;
-}
-
-#define MINFREQ 20.0f
-#define MAXFREQ 22000.0f
+#define MINFREQ 35.0f
+#define MAXFREQ 20000.0f
 
 static inline float floatToFrequency(float value) {
     if (value > 0.97f) return MAXFREQ;
@@ -257,101 +243,202 @@ static inline float floatToFrequency(float value) {
     return value < MAXFREQ ? value : MAXFREQ;
 }
 
+void DualPlayer::onFxValue(int ivalue) {
+    float value = float(ivalue) * 0.01f;
+    switch (activeFx) {
+        case 1:
+            filter->setResonantParameters(floatToFrequency(1.0f - value), 0.2f);
+            filter->enable(true);
+            flanger->enable(false);
+            roll->enable(false);
+            break;
+        case 2:
+            if (value > 0.8f) roll->beats = 0.0625f;
+            else if (value > 0.6f) roll->beats = 0.125f;
+            else if (value > 0.4f) roll->beats = 0.25f;
+            else if (value > 0.2f) roll->beats = 0.5f;
+            else roll->beats = 1.0f;
+            roll->enable(true);
+            filter->enable(false);
+            flanger->enable(false);
+            break;
+        default:
+            flanger->setWet(value);
+            flanger->enable(true);
+            filter->enable(false);
+            roll->enable(false);
+    };
+}
+
+void DualPlayer::process(SLAndroidSimpleBufferQueueItf caller) {
+    pthread_mutex_lock(&mutex);
+    float *stereoBuffer = outputBuffer[currentBuffer];
+	
+    bool masterIsA = (crossValue <= 0.5f);
+    float masterBpm = masterIsA ? playerA->currentBpm : playerB->currentBpm;
+    double msElapsedSinceLastBeatA = playerA->msElapsedSinceLastBeat; // When playerB needs it, playerA has already stepped this value, so save it now.
+	
+	if(deckAIsPlaying && deckBIsPlaying){
+		playerA->process(stereoBuffer,false,buffersize,volA,masterBpm,playerB->msElapsedSinceLastBeat);
+		playerB->process(stereoBuffer,true,buffersize,volB,masterBpm,playerA->msElapsedSinceLastBeat);	
+	} else if(deckAIsPlaying && !deckBIsPlaying) {
+		playerA->process(stereoBuffer,false,buffersize,volA,masterBpm,-1.0);
+	} else if (!deckAIsPlaying && deckBIsPlaying){
+		playerB->process(stereoBuffer,false,buffersize,volB,masterBpm,-1.0);
+	}
+	
+	/*
+    bool silence = !playerA->process(stereoBuffer, false, buffersize, volA, masterBpm, playerB->msElapsedSinceLastBeat);
+    if (playerB->process(stereoBuffer, !silence, buffersize, volB, masterBpm, msElapsedSinceLastBeatA)) silence = false;
+	*/
+	/*
+    roll->bpm = flanger->bpm = masterBpm; // Syncing fx is one line.
+
+    if (roll->process(silence ? NULL : stereoBuffer, stereoBuffer, buffersize) && silence) silence = false;
+    if (!silence) {
+        filter->process(stereoBuffer, stereoBuffer, buffersize);
+        flanger->process(stereoBuffer, stereoBuffer, buffersize);
+    };
+	*/
+    pthread_mutex_unlock(&mutex);
+
+    // The stereoBuffer is ready now, let's put the finished audio into the requested buffers.
+    if (!deckAIsPlaying && !deckBIsPlaying) memset(stereoBuffer, 0, buffersize * 4); else SuperpoweredStereoMixer::floatToShortInt(stereoBuffer, (short int *)stereoBuffer, buffersize);
+
+	(*caller)->Enqueue(caller, stereoBuffer, buffersize * 4);
+	if (currentBuffer < NUM_BUFFERS - 1) currentBuffer++; else currentBuffer = 0;
+}
 
 extern "C" {
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_initializeAll(JNIEnv *javaEnvironment, jobject self, jint theAndroidBufferSize);
 
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_setSampleRate(JNIEnv *javaEnvironment, jobject self, jint theAndroidSampleRate);
-
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_addNewTrackDeckA(JNIEnv *javaEnvironment, jobject self, jstring filePath, jdoubleArray trackParamsA);
-
-
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_addNewTrackDeckB(JNIEnv *javaEnvironment, jobject self, jstring filePath, jdoubleArray trackParamsB);
-
-JNIEXPORT jdouble Java_com_players_jason_dualplayers_PlayerJNICom_positionOfDeckAInMs(JNIEnv *javaEnvironment, jobject self);
-
-JNIEXPORT jdouble Java_com_players_jason_dualplayers_PlayerJNICom_positionOfDeckBInMs(JNIEnv *javaEnvironment, jobject self);
-
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_toggleDeckA(JNIEnv *javaEnvironment, jobject self);
-
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_toggleDeckB(JNIEnv *javaEnvironment, jobject self);
-
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_crossFaderController(JNIEnv *javaEnvironment, jobject self, jint value);
-
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_dualplayer(JNIEnv *javaEnvironment, jobject self, jint param);
+	
+	
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_addNewTrackDeckA(JNIEnv *javaEnvironment, jobject self, jstring pathToFile, jdoubleArray params);
+	
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_addNewTrackDeckB(JNIEnv *javaEnvironment, jobject self, jstring pathToFile, jdoubleArray params);
+	
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_pauseDeckA();
+	
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_pauseDeckB();
+	
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_playDeckA();
+	
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_playDeckB();
+	
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_onCrossfader(JNIEnv *javaEnvironment, jobject self, jint value);
+	
+	JNIEXPORT jdouble Java_com_players_jason_dualplayers_PlayerJNICom_positionOfDeckAInMs();
+	
+	JNIEXPORT jdouble Java_com_players_jason_dualplayers_PlayerJNICom_positionOfDeckBInMs();
+	
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_setSampleRateDeckA(JNIEnv *javaEnvironment, jobject self, jint samplerateOfTrack);
+	
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_setSampleRateDeckB(JNIEnv *javaEnvironment, jobject self, jint samplerateOfTrack);
+	
+	JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_setInitialSampleRate(JNIEnv *javaEnvironment, jobject self, jint intialSampleRate);
+	
 }
 
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_initializeAll(JNIEnv *javaEnvironment, jobject self, jint theAndroidBufferSize){
+static DualPlayer *dualplayer = NULL;
 
-    androidBufferSize = theAndroidBufferSize;
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"THE BUFFERSIZE IS...%i",androidBufferSize);
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"THE SAMPLERATE IS...%i",androidSampleRate);
-    dualplayer = new DualPlayer(androidSampleRate,theAndroidBufferSize);
+// Android is not passing more than 2 custom parameters, so we had to pack file offsets and lengths into an array.
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_dualplayer(JNIEnv *javaEnvironment, jobject self, jint param) {
+	// Convert the input jlong array to a regular int array.
+    unsigned int bufferSize = param;
+    
+    dualplayer = new DualPlayer(bufferSize,initialSampleR);
 }
 
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_setSampleRate(JNIEnv *javaEnvironment, jobject self, jint theAndroidSampleRate){
-    androidSampleRate = theAndroidSampleRate;
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_setInitialSampleRate(JNIEnv *javaEnvironment, jobject self, jint intialSampleRate){
+	initialSampleR = intialSampleRate;
 }
 
-
-
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_addNewTrackDeckA(JNIEnv *javaEnvironment, jobject self, jstring filePath, jdoubleArray trackParamsA){
-    jdouble *doubleParams = javaEnvironment->GetDoubleArrayElements(trackParamsA, JNI_FALSE);
-    double arr[2];
-    for(int i = 0; i < 2; i++) arr[i] = doubleParams[i];
-
-    const char *pathToFileA = javaEnvironment->GetStringUTFChars(filePath, JNI_FALSE);
-
-    dualplayer->addNewTrackDeckA(pathToFileA,arr[0],arr[1]);
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_setSampleRateDeckA(JNIEnv *javaEnvironment, jobject self, jint samplerateOfTrack){
+	deckATrackSampleRate = samplerateOfTrack;
 }
 
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_addNewTrackDeckB(JNIEnv *javaEnvironment, jobject self, jstring filePath, jdoubleArray trackParamsB){
-    jdouble *doubleParams = javaEnvironment->GetDoubleArrayElements(trackParamsB, JNI_FALSE);
-    double arr[2];
-    for(int i = 0; i < 2; i++) arr[i] = doubleParams[i];
-
-	double startMsTest = arr[1];
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"the starting beat ms is    %lf",startMsTest);
-    const char *pathToFileB = javaEnvironment->GetStringUTFChars(filePath, JNI_FALSE);
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"before add track is called in c++s");
-    dualplayer->addNewTrackDeckB(pathToFileB,arr[0],startMsTest);
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_setSampleRateDeckB(JNIEnv *javaEnvironment, jobject self, jint samplerateOfTrack){
+	deckBTrackSampleRate = samplerateOfTrack;
 }
 
-JNIEXPORT jdouble Java_com_players_jason_dualplayers_PlayerJNICom_positionOfDeckAInMs(JNIEnv *javaEnvironment, jobject self){
-     return dualplayer->playerA->positionMs;
+JNIEXPORT void
+Java_com_players_jason_dualplayers_PlayerJNICom_addNewTrackDeckA(JNIEnv *javaEnvironment, jobject self, jstring pathToFile, jdoubleArray params){
+	jdouble *doubleParams = javaEnvironment->GetDoubleArrayElements(params, JNI_FALSE);
+	double arr[2];
+	for(int i = 0; i <2; i++) arr[i] = doubleParams[i];
+	javaEnvironment->ReleaseDoubleArrayElements(params,doubleParams,JNI_ABORT);
+	
+	const char *path = javaEnvironment->GetStringUTFChars(pathToFile, JNI_FALSE);
+	
+	dualplayer->setPathForDeckA(path,arr[0], arr[1], deckATrackSampleRate);
+	
+	javaEnvironment->ReleaseStringUTFChars(pathToFile, path);
+}
 
- }
+JNIEXPORT void	
+Java_com_players_jason_dualplayers_PlayerJNICom_addNewTrackDeckB(JNIEnv *javaEnvironment, jobject self, jstring pathToFile, jdoubleArray params){
+	jdouble *doubleParams = javaEnvironment->GetDoubleArrayElements(params, JNI_FALSE);
+	double arr[2];
+	for(int i = 0; i <2; i++) arr[i] = doubleParams[i];
+	javaEnvironment->ReleaseDoubleArrayElements(params,doubleParams,JNI_ABORT);
+	
+	const char *path = javaEnvironment->GetStringUTFChars(pathToFile, JNI_FALSE);
+	
+	dualplayer->setPathForDeckA(path,arr[0], arr[1], deckBTrackSampleRate);
+	
+	javaEnvironment->ReleaseStringUTFChars(pathToFile, path);
+}
 
-JNIEXPORT jdouble Java_com_players_jason_dualplayers_PlayerJNICom_positionOfDeckBInMs(JNIEnv *javaEnvironment, jobject self){
-     return dualplayer->playerB->positionMs;
-
- }
-
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_toggleDeckA(JNIEnv *javaEnvironment, jobject self){
-	if(!stopOrStartA){
-		dualplayer->playerA->play(true);
-		dualplayer->pauseDeckA();
-		stopOrStartA = true;
-	} else {
-		dualplayer->pauseDeckA();
-		stopOrStartA = false;
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_playDeckA(){
+	if(firstTime){
+		__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, "initialisationtime");
+		dualplayer->initializeAll();
+		firstTime = false;
+		
+		
 	}
-}
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_toggleDeckB(JNIEnv *javaEnvironment, jobject self){
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"before we toggle B");
-	if(!stopOrStartB){
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"before we play B");
-		dualplayer->playerB->play(false);
-		__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"after we play B");
-		//dualplayer->pauseDeckB();
-		stopOrStartB = true;
-	} else {
-		dualplayer->pauseDeckB();
-		stopOrStartB = false;
-	}
+	dualplayer->onPlayPauseDeckA(true);
 }
 
-JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_crossFaderController(JNIEnv *javaEnvironment, jobject self, jint value) {
-__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"does the crossfader break?");
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_playDeckB(){
+	
+	dualplayer->onPlayPauseDeckB(true);
+}
+
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_pauseDeckA(){
+	dualplayer->onPlayPauseDeckA(false);
+}
+
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_pauseDeckB(){
+	dualplayer->onPlayPauseDeckB(false);
+}
+
+JNIEXPORT jdouble Java_com_players_jason_dualplayers_PlayerJNICom_positionOfDeckAInMs(){
+	double pos = dualplayer->getPositionOfDeckAMs();
+	return pos;
+}
+
+JNIEXPORT jdouble Java_com_players_jason_dualplayers_PlayerJNICom_positionOfDeckBInMs(){
+	double pos = dualplayer->getPositionOfDeckBMs();
+	return pos;
+}
+
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_onCrossfader(JNIEnv *javaEnvironment, jobject self, jint value) {
 	dualplayer->onCrossfader(value);
-	__android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG,"not here");
 }
+
+/*
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_onFxSelect(JNIEnv *javaEnvironment, jobject self, jint value) {
+	example->onFxSelect(value);
+}
+
+
+JNIEXPORT void Java_com_players_jason_dualplayers_PlayerJNICom_onFxOff(JNIEnv *javaEnvironment, jobject self) {
+	example->onFxOff();
+}
+
+JNIEXPORT void Java_com_superpowered_crossexample_MainActivity_onFxValue(JNIEnv *javaEnvironment, jobject self, jint value) {
+	example->onFxValue(value);
+}
+*/

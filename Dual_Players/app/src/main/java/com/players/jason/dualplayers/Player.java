@@ -74,7 +74,6 @@ public class Player extends IntentService {
         PlayerJNICom playerjnicom = new PlayerJNICom();
         ArrayList<TrackStats> filteredList = new ArrayList<TrackStats>();
         TrackStats nextTrack;
-        int playerACurrentBar = 0, playerBCurrentBar = 0, playerATrackTotalBars = 0, playerBTrackTotalBars = 0;
         boolean weAreChangingOver = false;
         boolean changeOverLastStage = false;
         int crossFaderValue = 50;
@@ -95,20 +94,23 @@ public class Player extends IntentService {
             int numOfTrackToSelect = rng.nextInt(allTracks.size());
             String pathToFile = allTracks.get(numOfTrackToSelect).getFilePath();
             this.currentKeyPlaying = allTracks.get(numOfTrackToSelect).getCamelotKey();
-           playerjnicom.setSampleRate(sampleRate);
+
            // playerjnicom.setFirstTrack(TrackStats);
          //   playerjnicom.setSecondTrack(TrackStats);
-            playerjnicom.initializeAll(bufferSize);
-            playerjnicom.crossFaderController(0);
+            playerjnicom.setInitialSampleRate(sampleRate);
+            playerjnicom.dualplayer(bufferSize);
+
             Log.d("nOCO","Initialize all method called");
             try {
                 Thread.sleep(800);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            playerjnicom.addNewTrackDeckA(pathToFile,new double[]{(double)allTracks.get(numOfTrackToSelect).getTrackBPM(),(double)allTracks.get(numOfTrackToSelect).getFirstBeatMs()});
-
             deckATrack = allTracks.get(numOfTrackToSelect);
+            playerjnicom.setSampleRateDeckA(deckATrack.getSampleRate());
+            playerjnicom.addNewTrackDeckA(pathToFile,new double[]{(double)deckATrack.getTrackBPM(),(double)deckATrack.getFirstBeatMs()});
+
+            playerjnicom.crossFaderController(0);
             allTracks.remove(numOfTrackToSelect);
             Log.d("noco", "before we toggle deck A");
             try {
@@ -120,37 +122,42 @@ public class Player extends IntentService {
             Log.d("noco","after we toggle deck A");
             this.masterDeck = 0;
             isDeckAPlaying = true;
+
             waitingState();
         }
 
         private void setNextTrack() {
             String filePath = nextTrack.getFilePath();
             if (masterDeck == 0) {
-                deckATrack = nextTrack;
+                deckBTrack = nextTrack;
                 Log.d("noco","WE tried to ADDED THE TRACK TO B");
+                playerjnicom.setSampleRateDeckB(deckBTrack.getSampleRate());
                 playerjnicom.addNewTrackDeckB(filePath,new double[]{(double) nextTrack.getTrackBPM(), nextTrack.getFirstBeatMs()});
                 Log.d("noco","WE ADDED THE TRACK TO B");
 
-                allTracks.remove(deckATrack);
-            } else {
-                Log.d("noco","WE ADDED THE TRACK TO A");
-                deckBTrack = nextTrack;
-                playerjnicom.addNewTrackDeckA(filePath, new double[]{(double) nextTrack.getTrackBPM(), nextTrack.getFirstBeatMs()});
                 allTracks.remove(deckBTrack);
+            } else {
+                Log.d("noco","WE Tried THE TRACK TO A");
+                deckATrack = nextTrack;
+                playerjnicom.setSampleRateDeckA(nextTrack.getSampleRate());
+                playerjnicom.addNewTrackDeckA(filePath, new double[]{(double) deckATrack.getTrackBPM(), deckATrack.getFirstBeatMs()});
+                allTracks.remove(deckATrack);
+                Log.d("noco","WE ADDED THE TRACK TO A");
             }
 
         }
 
         private void playNextTrack() {
             if (masterDeck == 0) {
-                Log.d("noco","Before the switch TOggle B");
+                Log.d("noco","Before B is played");
                 playerjnicom.toggleDeckB();
-
+                Log.d("noco","After B is Played");
                 //killLowDeckA();
                 weAreChangingOver = true;
             } else {
-                Log.d("noco","Before the switch TOggle A");
+                Log.d("noco","Before A is played");
                 playerjnicom.toggleDeckA();
+                Log.d("noco","After we Play A");
                 //killLowDeckB();
                 weAreChangingOver = true;
             }
@@ -158,22 +165,19 @@ public class Player extends IntentService {
 
 
         private void waitingState() {
-            int numOfBarsLeft = getCurrentBarOfMasterTrack(getMasterTrack())[0];
-            int numberOfBeats = getCurrentBarOfMasterTrack(getMasterTrack())[1];
-            Log.d("noco", "bars: " + getCurrentBarOfMasterTrack(getMasterTrack())[0] + " beats " + getCurrentBarOfMasterTrack(getMasterTrack())[1]);
+            int numOfBarsLeft = getCurrentBarOfMasterTrack()[0];
+            int numberOfBeats = getCurrentBarOfMasterTrack()[1];
+            Log.d("noco", "bars: " + getCurrentBarOfMasterTrack()[0] + " beats " + getCurrentBarOfMasterTrack()[1]);
             if (((numOfBarsLeft) % 16 == 15) && (numberOfBeats == 3)) {
 
                 shouldISwitch(numOfBarsLeft);
-                if (changeOverLastStage) {
+                /*if (changeOverLastStage) {
                     Log.d("noco","Selecting next track" );
-                    //setBassOn();
-                    selectNextTrack();
 
-                    //setNextTrack();
-                }
+                }*/
             }
             if (weAreChangingOver) {
-                if (numberOfBeats == 0) {
+                if (numberOfBeats == 3) {
                     crossFadeTracks();
                 }
             }
@@ -291,16 +295,16 @@ public class Player extends IntentService {
             }
         }
 
-        private int[] getCurrentBarOfMasterTrack(TrackStats masterTrack) {
+        private int[] getCurrentBarOfMasterTrack() {
 
             if (masterDeck == 0) {
-                return masterTrack.calcNumberOfBarsPassed(playerjnicom.positionOfDeckAInMs());
+                return this.deckATrack.calcNumberOfBarsPassed(playerjnicom.positionOfDeckAInMs());
             } else {
-                return masterTrack.calcNumberOfBarsPassed(playerjnicom.positionOfDeckBInMs());
+                return deckBTrack.calcNumberOfBarsPassed(playerjnicom.positionOfDeckBInMs());
             }
         }
 
-
+/*
         private void killLowDeckA() {
             for (int i = 0; i < 101; i++) {
                 playerjnicom.lowKillDeckA(i);
@@ -331,12 +335,12 @@ public class Player extends IntentService {
                 playerjnicom.lowKillDeckB(0);
             }
         }
-
+*/
         private void crossFadeTracks() {
             if (masterDeck == 0) {
-                crossFaderValue = crossFaderValue + 1;
+                crossFaderValue = crossFaderValue + 2;
                 playerjnicom.crossFaderController(crossFaderValue);
-                if (crossFaderValue == 98) {
+                if (crossFaderValue > 97) {
                     toggleMaster();
                     playerjnicom.toggleDeckA();
                     isDeckAPlaying = false;
@@ -348,7 +352,7 @@ public class Player extends IntentService {
                 crossFaderValue = crossFaderValue - 3;
                 playerjnicom.crossFaderController(crossFaderValue);
 
-                if (crossFaderValue == 2) {
+                if (crossFaderValue < 3) {
                     toggleMaster();
                     playerjnicom.toggleDeckB();
                     isDeckBPlaying = false;

@@ -277,7 +277,7 @@ public:
  @param tempo 1.0f is "original speed".
  @param masterTempo Enable or disable time-stretching.
  */
-    void setTempo(float tempo, bool masterTempo);
+    void setTempo(double tempo, bool masterTempo);
 /**
  @brief Sets the pitch shift value. Needs masterTempo enabled.
  

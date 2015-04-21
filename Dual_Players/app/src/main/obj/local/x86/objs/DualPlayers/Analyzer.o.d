@@ -1,5 +1,5 @@
-D:/FinalProject/Dual_Players/app/src/main/obj/local/x86/objs/DualPlayers/Analyzer.o: \
-  D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.cpp \
+D:/FinalProject/Dual_Players/app/src/main//obj/local/x86/objs/DualPlayers/Analyzer.o: \
+  D:/FinalProject/Dual_Players/app/src/main//jni/Analyzer.cpp \
   D:/ndk/platforms/android-9/arch-x86/usr/include\jni.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\sys/cdefs.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\sys/cdefs_elf.h \
@@ -25,10 +25,10 @@ D:/FinalProject/Dual_Players/app/src/main/obj/local/x86/objs/DualPlayers/Analyze
   D:/ndk/platforms/android-9/arch-x86/usr/include\memory.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\stdio.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\android/log.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAnalyzer.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredDecoder.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredMixer.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredAnalyzer.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredDecoder.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredMixer.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/Analyzer.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\SLES/OpenSLES.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\SLES/OpenSLES_Platform.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\SLES/OpenSLES_Android.h \
@@ -54,7 +54,7 @@ D:/FinalProject/Dual_Players/app/src/main/obj/local/x86/objs/DualPlayers/Analyze
   D:/ndk/platforms/android-9/arch-x86/usr/include\sys/ucontext.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\sys/user.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\sched.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAudioBuffers.h
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredAudioBuffers.h
 
 D:/ndk/platforms/android-9/arch-x86/usr/include\jni.h:
 
@@ -106,13 +106,13 @@ D:/ndk/platforms/android-9/arch-x86/usr/include\stdio.h:
 
 D:/ndk/platforms/android-9/arch-x86/usr/include\android/log.h:
 
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAnalyzer.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredAnalyzer.h:
 
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredDecoder.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredDecoder.h:
 
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredMixer.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredMixer.h:
 
-D:/FinalProject/Dual_Players/app/src/main/jni/Analyzer.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/Analyzer.h:
 
 D:/ndk/platforms/android-9/arch-x86/usr/include\SLES/OpenSLES.h:
 
@@ -164,4 +164,4 @@ D:/ndk/platforms/android-9/arch-x86/usr/include\sys/user.h:
 
 D:/ndk/platforms/android-9/arch-x86/usr/include\sched.h:
 
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAudioBuffers.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredAudioBuffers.h:

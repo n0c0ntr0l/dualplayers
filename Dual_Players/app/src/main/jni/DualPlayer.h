@@ -6,7 +6,7 @@
 #include <math.h>
 #include <pthread.h>
 
-
+#include "DualPlayer.h"
 #include "SuperpoweredAdvancedAudioPlayer.h"
 #include "SuperpoweredFilter.h"
 #include "SuperpoweredRoll.h"
@@ -20,36 +20,41 @@ static const float headroom = powf(10.0f, -HEADROOM_DECIBEL * 0.025);
 
 class DualPlayer {
 public:
-        DualPlayer(unsigned int theSampleRate, unsigned int theSizeOfTheBuffer);
+        DualPlayer(unsigned int buffer, unsigned int sample);
         ~DualPlayer();
-		void initialiseAudioEngine();
-		
+		//void initialiseAudioEngine();
         void process(SLAndroidSimpleBufferQueueItf caller);
-        void onPlayPause(bool play);
-        void addNewTrackDeckA(const char *pathToFileA, double bpm, double startingBeatMs);
-        void addNewTrackDeckB(const char *pathToFileB, double bpm, double startingBeatMs);
-        void pauseDeckA();
-        void pauseDeckB();
+        //void onPlayPause(bool play);
+        void setPathForDeckA(const char* path, double bpm, double setPosition, unsigned int sampleRate);
+        void setPathForDeckB(const char* path, double bpm, double setPosition, unsigned int sampleRate);
+        void onPlayPauseDeckA(bool play);
+        void onPlayPauseDeckB(bool play);
+		void onFxSelect(int value);
+		void onFxOff();
+		void onFxValue(int value);
         void onCrossfader(int value);
-        void lowKillDeckOnDeckA(int value);
-        void lowKilDeckOnDeckB(int value);
+		double getPositionOfDeckAMs();
+		double getPositionOfDeckBMs();
+		void initializeAll();
+        //void lowKillDeckOnDeckA(int value);
+        //void lowKilDeckOnDeckB(int value);
 		SuperpoweredAdvancedAudioPlayer *playerA, *playerB;
-		bool isEngineInitialized;
+		//bool isEngineInitialized;
         
 private:
 	SLObjectItf openSLEngine, outputMix, bufferPlayer;
 	SLAndroidSimpleBufferQueueItf bufferQueue;
+	bool firstPlay;
+	bool deckAIsPlaying;
+	bool deckBIsPlaying;
+    SuperpoweredRoll *roll;
+    SuperpoweredFilter *filter;
+    SuperpoweredFlanger *flanger;
     SuperpoweredStereoMixer *mixer;
-    Superpowered3BandEQ *threeBandEQ;
-	double bpmMaster;
-	unsigned int samplerate;
     unsigned char activeFx;
-    float crossValue, volA, volB, lowKillDeckA, lowKillDeckB;
+    unsigned int samplerate;
+    float crossValue, volA, volB;
     pthread_mutex_t mutex;
-	SuperpoweredAdvancedAudioPlayerCallback  	callbackA;
-	SuperpoweredAdvancedAudioPlayerCallback  	callbackB;
-	bool hasAbeenPlayedYet;
-	bool hasBbeenPlayedYet;
     float *outputBuffer[NUM_BUFFERS];
 	int currentBuffer, buffersize;
 

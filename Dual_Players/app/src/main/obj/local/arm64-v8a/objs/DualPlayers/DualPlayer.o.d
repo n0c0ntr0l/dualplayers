@@ -1,11 +1,6 @@
-D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/DualPlayers/DualPlayer.o: \
-  D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.cpp \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h \
+D:/FinalProject/Dual_Players/app/src/main//obj/local/arm64-v8a/objs/DualPlayers/DualPlayer.o: \
+  D:/FinalProject/Dual_Players/app/src/main//jni/DualPlayer.cpp \
+  D:/FinalProject/Dual_Players/app/src/main//jni/DualPlayer.h \
   D:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h \
   D:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Platform.h \
   D:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES_Android.h \
@@ -58,8 +53,13 @@ D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/DualPlayers/D
   D:/ndk/platforms/android-21/arch-arm64/usr/include\sys/user.h \
   D:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h \
   D:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredAdvancedAudioPlayer.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFilter.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFX.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredRoll.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFlanger.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredMixer.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/Superpowered3BandEQ.h \
   D:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h \
   D:/ndk/platforms/android-21/arch-arm64/usr/include\stdlib.h \
   D:/ndk/platforms/android-21/arch-arm64/usr/include\alloca.h \
@@ -68,17 +68,7 @@ D:/FinalProject/Dual_Players/app/src/main/obj/local/arm64-v8a/objs/DualPlayers/D
   D:/ndk/platforms/android-21/arch-arm64/usr/include\stdio.h \
   D:/ndk/platforms/android-21/arch-arm64/usr/include\android/log.h
 
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h:
-
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h:
-
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h:
-
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h:
-
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h:
-
-D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/DualPlayer.h:
 
 D:/ndk/platforms/android-21/arch-arm64/usr/include\SLES/OpenSLES.h:
 
@@ -184,9 +174,19 @@ D:/ndk/platforms/android-21/arch-arm64/usr/include\sched.h:
 
 D:/ndk/platforms/android-21/arch-arm64/usr/include\linux/sched.h:
 
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredAdvancedAudioPlayer.h:
 
-D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFilter.h:
+
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFX.h:
+
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredRoll.h:
+
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFlanger.h:
+
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredMixer.h:
+
+D:/FinalProject/Dual_Players/app/src/main//jni/Superpowered3BandEQ.h:
 
 D:/ndk/platforms/android-21/arch-arm64/usr/include\jni.h:
 

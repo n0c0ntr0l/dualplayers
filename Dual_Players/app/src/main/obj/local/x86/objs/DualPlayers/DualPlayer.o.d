@@ -1,11 +1,6 @@
-D:/FinalProject/Dual_Players/app/src/main/obj/local/x86/objs/DualPlayers/DualPlayer.o: \
-  D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.cpp \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h \
+D:/FinalProject/Dual_Players/app/src/main//obj/local/x86/objs/DualPlayers/DualPlayer.o: \
+  D:/FinalProject/Dual_Players/app/src/main//jni/DualPlayer.cpp \
+  D:/FinalProject/Dual_Players/app/src/main//jni/DualPlayer.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\SLES/OpenSLES.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\SLES/OpenSLES_Platform.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\SLES/OpenSLES_Android.h \
@@ -49,8 +44,13 @@ D:/FinalProject/Dual_Players/app/src/main/obj/local/x86/objs/DualPlayers/DualPla
   D:/ndk/platforms/android-9/arch-x86/usr/include\sys/ucontext.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\sys/user.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\sched.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h \
-  D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredAdvancedAudioPlayer.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFilter.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFX.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredRoll.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFlanger.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredMixer.h \
+  D:/FinalProject/Dual_Players/app/src/main//jni/Superpowered3BandEQ.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\jni.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\stdlib.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\alloca.h \
@@ -59,17 +59,7 @@ D:/FinalProject/Dual_Players/app/src/main/obj/local/x86/objs/DualPlayers/DualPla
   D:/ndk/platforms/android-9/arch-x86/usr/include\stdio.h \
   D:/ndk/platforms/android-9/arch-x86/usr/include\android/log.h
 
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFilter.h:
-
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredFX.h:
-
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredFlanger.h:
-
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredMixer.h:
-
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperPoweredRoll.h:
-
-D:/FinalProject/Dual_Players/app/src/main/jni/DualPlayer.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/DualPlayer.h:
 
 D:/ndk/platforms/android-9/arch-x86/usr/include\SLES/OpenSLES.h:
 
@@ -157,9 +147,19 @@ D:/ndk/platforms/android-9/arch-x86/usr/include\sys/user.h:
 
 D:/ndk/platforms/android-9/arch-x86/usr/include\sched.h:
 
-D:/FinalProject/Dual_Players/app/src/main/jni/SuperpoweredAdvancedAudioPlayer.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredAdvancedAudioPlayer.h:
 
-D:/FinalProject/Dual_Players/app/src/main/jni/Superpowered3BandEQ.h:
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFilter.h:
+
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFX.h:
+
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredRoll.h:
+
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredFlanger.h:
+
+D:/FinalProject/Dual_Players/app/src/main//jni/SuperpoweredMixer.h:
+
+D:/FinalProject/Dual_Players/app/src/main//jni/Superpowered3BandEQ.h:
 
 D:/ndk/platforms/android-9/arch-x86/usr/include\jni.h:
 
